@@ -1,6 +1,6 @@
 package WeekOne.OOP;
 
-public class BankAccount {
+public class BankAccount implements AccountService{
     private String accountNumber;
     private double balance;
 
@@ -29,6 +29,13 @@ public class BankAccount {
             System.out.println("Insufficient funds or invalid amount for withdrawal.");
         }
     }
+    public void withdraw(double min, double percentage ) {
+        // method overloading demonstration. withdraw a percentage of balance, leaving a minimum amount
+        double balance = getBalance() - min;
+        double withdrawn = balance * percentage/100;
+        setBalance(balance - withdrawn);
+        System.out.println(withdrawn + " withdrawn as percentage successfully.");
+    }
 
     // Check balance method
     public double getBalance() {
@@ -52,5 +59,8 @@ public class BankAccount {
 
     public String getAccountNumber() {
         return accountNumber;
+    }
+    private void setBalance(double amount) {
+        balance = amount;
     }
 }

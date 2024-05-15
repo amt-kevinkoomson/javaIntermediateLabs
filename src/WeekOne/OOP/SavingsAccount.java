@@ -25,7 +25,8 @@ public class SavingsAccount extends BankAccount {
         mySavings.deposit(500.0);
 
         // Withdrawing money
-        mySavings.withdraw(200.0);
+        mySavings.withdraw(200.0, 50.0);
+        mySavings.withdraw(10);
 
         // Checking balance
         System.out.println("Current Balance: " + mySavings.getBalance());

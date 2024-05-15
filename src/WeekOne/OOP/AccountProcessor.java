@@ -16,7 +16,7 @@ public class AccountProcessor {
     // Main method for testing
     public static void main(String[] args) {
         // Creating instances of different account types
-        BankAccount checkingAccount = new CheckingAccount("111111", 1000.0, 2.5);
+        BankAccount checkingAccount = new CheckingAccount("111111", 1000.0);
         BankAccount savingsAccount = new SavingsAccount("222222", 2000.0, 2.5);
 
         // Processing deposits
