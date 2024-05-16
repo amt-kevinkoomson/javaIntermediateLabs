@@ -25,6 +25,10 @@ public class ShoppingCart {
         }
     }
 
+    public void getItemByIndex(int index) {
+        System.out.println("Item at given index is " + items.get(index));
+    }
+
     // Method to display items in the cart
     public void displayCart() {
         System.out.println("Items in the cart:");
@@ -51,6 +55,8 @@ public class ShoppingCart {
 
         // Display the updated contents of the cart
         cart.displayCart();
+
+        cart.getItemByIndex(1);
     }
 }
 
