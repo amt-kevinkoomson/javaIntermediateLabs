@@ -8,11 +8,11 @@ public class AverageCalculator {
         if (numbers == null || numbers.isEmpty()) {
             throw new IllegalArgumentException("List of numbers is empty or null");
         }
+//        Choose a collection of data (e.g., list of objects).
+//                Implement a custom comparator to sort the collection based on specific criteria.
+//                Utilize the Stream API to filter, transform, and process elements within the sorted collection.
 
-        double sum = 0.0;
-        for (T number : numbers) {
-            sum += number.doubleValue();
-        }
+        double sum = numbers.stream().mapToDouble(Number::doubleValue).sum();
         return sum / numbers.size();
     }
 
