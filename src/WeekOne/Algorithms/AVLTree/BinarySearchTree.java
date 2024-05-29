@@ -129,4 +129,16 @@ public class BinarySearchTree<T extends Comparable<T>> implements Tree<T> {
     public boolean isEmpty() {
         return root == null;
     }
+
+
+    public static void main(String[] args) {
+        BinarySearchTree<Integer> binarySearchTree = new BinarySearchTree<>();
+        binarySearchTree.insert(10);
+        binarySearchTree.insert(20);
+        binarySearchTree.insert(30);
+        binarySearchTree.insert(40);
+        binarySearchTree.insert(50);
+        System.out.println(" in order traversal : ");
+        binarySearchTree.traverse();
+    }
 }
