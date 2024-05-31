@@ -1,5 +1,7 @@
 package WeekTwo.BehaviorialPatterns;
 
+import lombok.Setter;
+
 import java.util.Arrays;
 
 // Strategy interface for sorting algorithms
@@ -61,14 +63,11 @@ class QuickSort implements SortingStrategy {
 }
 
 // Context class that uses a Strategy for sorting
+@Setter
 class SortContext {
     private SortingStrategy sortingStrategy;
 
     public SortContext(SortingStrategy sortingStrategy) {
-        this.sortingStrategy = sortingStrategy;
-    }
-
-    public void setSortingStrategy(SortingStrategy sortingStrategy) {
         this.sortingStrategy = sortingStrategy;
     }
 
